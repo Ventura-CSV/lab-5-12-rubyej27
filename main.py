@@ -2,15 +2,28 @@ import random
 
 
 def split(numbers):
-    """
-    ########################################
-    Code Your Program here
-    ########################################
-    """
-
-    #################
-    # Do not delete return statement
+    pivot = numbers[0]
+    less = []
+    greater = []
+    for num in numbers[1:]:
+        if num <= pivot:
+            less.append(num)
+        else:
+            greater.append(num)
+    return less + [pivot] + greater
     return numbers
+        
+
+"""
+########################################
+Code Your Program here
+########################################
+"""
+
+   #################
+    # Do not delete return statement
+
+    
 
 
 def main():
